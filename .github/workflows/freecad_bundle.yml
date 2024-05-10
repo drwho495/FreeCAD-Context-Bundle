@@ -1,4 +1,5 @@
 name: freecad_bundle
+runs-on: self-hosted
 on:
   schedule:
    - cron: "0 23 * * 1,5"
