@@ -97,7 +97,7 @@ jobs:
         run: |
           # store list of existing assets before upload
           # exclude files with the same name as new ones
-          version_name=0.22
+          version_name=weekly-builds
           OLD_ASSETS=$(gh release view -R "$TARGET_REPO" "$DEPLOY_RELEASE" --json assets \
             --jq ".assets[].name" | grep "$ASSET_PATTERN" | grep -vF $version_name || true; )
           # upload new assets
