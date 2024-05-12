@@ -8,7 +8,7 @@ fi
 conda_env="AppDir/usr"
 echo -e "\nCreate the environment"
 
-packages="freecad=*.pre occt vtk python=3.11 blas=*=openblas numpy \
+packages="./freecad-0.22.pre-py311h58bd067_59.conda occt vtk python=3.11 blas=*=openblas numpy \
           matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
           xlutils olefile requests blinker opencv nine docutils \
           opencamlib calculix ifcopenshell lark appimage-updater-bridge"
