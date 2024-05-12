@@ -12,8 +12,8 @@ on:
 
 jobs:
   build-bundles:
-    #runs-on: ${{ matrix.os }}
-    runs-on: self-hosted
+    runs-on: ${{ matrix.os }}
+    #runs-on: self-hosted
     strategy:
       max-parallel: 4
       fail-fast: false
