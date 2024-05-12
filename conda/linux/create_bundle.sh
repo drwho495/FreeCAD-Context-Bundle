@@ -8,7 +8,7 @@ fi
 conda_env="AppDir/usr"
 echo -e "\nCreate the environment"
 
-packages="./freecad-0.22.pre-py311h58bd067_59.conda occt vtk python=3.11 blas=*=openblas numpy \
+packages="occt vtk python=3.11 blas=*=openblas numpy \
           matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
           xlutils olefile requests blinker opencv nine docutils \
           opencamlib calculix ifcopenshell lark appimage-updater-bridge"
@@ -22,7 +22,7 @@ mamba create -p ${conda_env} ${packages} \
 #installing freecad
 echo "Installing FreeCAD Context .conda..."
 
-#mamba install -p ${conda_env} ./freecad-0.22.pre-py311h58bd067_59.conda --copy -c freecad/label/dev -y
+mamba install -p ${conda_env} ./freecad-0.22.pre-py311h58bd067_59.conda --copy -c freecad/label/dev -y
 
 
 mamba run -p ${conda_env} python ../scripts/get_freecad_version.py
