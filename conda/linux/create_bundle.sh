@@ -22,7 +22,7 @@ mamba create -p ${conda_env} ${packages} \
 #installing freecad
 echo "Installing FreeCAD Context .conda..."
 
-mamba install -p ${conda_env} ./freecad-ubuntu-build.conda --copy -c freecad/label/dev -y
+mamba install -p ${conda_env} ./freecad-0.22.pre-py311h58bd067_60.conda --copy -c freecad/label/dev -y
 
 
 mamba run -p ${conda_env} python ../scripts/get_freecad_version.py
