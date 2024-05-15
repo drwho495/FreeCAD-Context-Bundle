@@ -16,13 +16,18 @@ packages="occt vtk xerces-c libspnav pivy ros-humble-libyaml-vendor pyside2 r-li
 #  packages=${packages}" ifcopenshell appimage-updater-bridge"
 #fi
 
+sudo wget https://github.com/drwho495/freecad-context-feedstock/releases/download/conda-release/linux-conda-release.zip
+sudo mkdir ./conda-packages
+sudo unzip ./linux-conda-release.zip -d ./conda-packages
+sudo chmod 777 ./conda-packages/*
+
 mamba create -p ${conda_env} ${packages} \
   --copy -c freecad/label/dev -c robostack-staging -c conda-forge -y
 
 #installing freecad
 echo "Installing FreeCAD Context .conda..."
 
-mamba install -p ${conda_env} ./freecad-0.22.pre-py311h58bd067_60.conda --copy -c freecad/label/dev -y
+mamba install -p ${conda_env} ./conda-packages/* --copy -c freecad/label/dev -y
 
 
 mamba run -p ${conda_env} python ../scripts/get_freecad_version.py
