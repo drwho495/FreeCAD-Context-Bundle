@@ -9,7 +9,7 @@ conda_env="AppDir/usr"
 echo -e "\nCreate the environment"
 
 packages="occt vtk xerces-c libspnav pivy ros-humble-libyaml-vendor pyside2 r-libcoin python=3.11 blas=*=openblas numpy \
-          l-nafaryus::netgen matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
+          l-nafaryus::netgen=6.2.2105.152 matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
           xlutils olefile requests blinker opencv nine docutils \
           opencamlib calculix ifcopenshell lark appimage-updater-bridge"
 #if [[ "$ARCH" = "x86_64" ]]; then
