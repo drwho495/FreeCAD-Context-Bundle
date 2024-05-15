@@ -22,7 +22,7 @@ sudo unzip ./linux-conda-release.zip -d ./conda-packages
 sudo chmod 777 ./conda-packages/*
 
 mamba create -p ${conda_env} ${packages} \
-  --copy -c freecad/label/dev -c robostack-staging -c l-nafaryus -c conda-forge -y
+  --copy -c freecad/label/dev -c robostack-staging -c conda-forge -y
 
 #installing freecad
 echo "Installing FreeCAD Context .conda..."
