@@ -9,7 +9,7 @@ conda_env="AppDir/usr"
 echo -e "\nCreate the environment"
 
 packages="occt vtk xerces-c libspnav pivy ros-humble-libyaml-vendor pyside2 r-libcoin python=3.11 blas=*=openblas numpy \
-          netgen matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
+          l-nafaryus::netgen matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
           xlutils olefile requests blinker opencv nine docutils \
           opencamlib calculix ifcopenshell lark appimage-updater-bridge"
 #if [[ "$ARCH" = "x86_64" ]]; then
@@ -22,7 +22,7 @@ sudo unzip ./linux-conda-release.zip -d ./conda-packages
 sudo chmod 777 ./conda-packages/*
 
 mamba create -p ${conda_env} ${packages} \
-  --copy -c freecad/label/dev -c robostack-staging -c conda-forge -y
+  --copy -c freecad/label/dev -c l-nafaryus -c robostack-staging -c conda-forge -y
 
 #installing freecad
 echo "Installing FreeCAD Context .conda..."
