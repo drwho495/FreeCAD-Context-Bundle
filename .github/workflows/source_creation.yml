@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Run a multi-line script
         run: |
-          git clone https://github.com/drwho495/FreeCAD-Context-Fork -b main
+          git clone https://github.com/drwho495/FreeCAD-Context-Fork -b LinkStable
           touch freecad_version.txt
           wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/${GITHUB_REF##*/}/make_version_file.py
           wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/${GITHUB_REF##*/}/disable_git_info.patch
