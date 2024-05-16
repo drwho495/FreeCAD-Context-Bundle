@@ -22,8 +22,8 @@ jobs:
         run: |
           git clone https://github.com/drwho495/FreeCAD-Context-Fork
           touch freecad_version.txt
-          wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/${GITHUB_REF##*/}/make_version_file.py
-          wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/${GITHUB_REF##*/}/disable_git_info.patch
+          wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/main/make_version_file.py
+          wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/main/disable_git_info.patch
           ls
           cd FreeCAD-Context-Fork
           git checkout ${{ matrix.branch }}
