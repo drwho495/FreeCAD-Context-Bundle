@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        tag: ["weekly-builds"]
-        branch: ["main"]
+        tag: ["linkstage-builds"]
+        branch: ["LinkStable"]
 
     steps:
       - name: Run a multi-line script
         run: |
-          git clone https://github.com/drwho495/FreeCAD-Context-Fork -b LinkStable
+          git clone https://github.com/drwho495/FreeCAD-Context-Fork
           touch freecad_version.txt
           wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/${GITHUB_REF##*/}/make_version_file.py
           wget https://raw.githubusercontent.com/FreeCAD/FreeCAD-Bundle/${GITHUB_REF##*/}/disable_git_info.patch
