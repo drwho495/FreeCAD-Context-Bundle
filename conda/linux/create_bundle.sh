@@ -16,7 +16,7 @@ packages="occt vtk xerces-c libspnav pivy=0.6.8 ros-humble-libyaml-vendor pyside
 #  packages=${packages}" ifcopenshell appimage-updater-bridge"
 #fi
 
-sudo wget https://github.com/drwho495/freecad-context-feedstock/releases/download/conda-release-feedstock/linux-conda-release.zip
+sudo wget https://github.com/drwho495/freecad-context-feedstock/releases/download/conda-release-linkstage/linux-conda-release.zip
 sudo mkdir ./conda-packages
 sudo unzip ./linux-conda-release.zip -d ./conda-packages
 sudo chmod 777 ./conda-packages/*
