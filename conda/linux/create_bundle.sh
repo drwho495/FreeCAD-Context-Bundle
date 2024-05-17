@@ -21,8 +21,10 @@ sudo mkdir ./conda-packages
 sudo unzip ./linux-conda-release.zip -d ./conda-packages
 sudo chmod 777 ./conda-packages/*
 
+conda config --set channel_priority strict
+
 mamba create -p ${conda_env} ${packages} \
-  --copy -c freecad/label/dev -c anaconda -c l-nafaryus -c robostack-staging -c conda-forge -y
+  --copy -c conda-forge -c freecad/label/dev -c l-nafaryus -c robostack-staging -y
 
 #installing freecad
 echo "Installing FreeCAD Context .conda..."
