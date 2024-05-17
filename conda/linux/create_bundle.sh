@@ -9,14 +9,14 @@ conda_env="AppDir/usr"
 echo -e "\nCreate the environment"
 
 packages="occt vtk xerces-c libspnav pivy ros-humble-libyaml-vendor pyside2 r-libcoin python=3.11 blas=*=openblas numpy \
-          matplotlib-base boost=1.84 scipy sympy pandas six pyyaml pycollada lxml \
+          matplotlib-base scipy sympy pandas six pyyaml pycollada lxml \
           xlutils olefile requests blinker opencv nine docutils \
           opencamlib calculix ifcopenshell lark appimage-updater-bridge"
 #if [[ "$ARCH" = "x86_64" ]]; then
 #  packages=${packages}" ifcopenshell appimage-updater-bridge"
 #fi
 
-sudo wget https://github.com/drwho495/freecad-context-feedstock/releases/download/conda-release-linkstage/linux-conda-release.zip
+sudo wget https://github.com/drwho495/freecad-context-feedstock/releases/download/conda-release/linux-conda-release.zip
 sudo mkdir ./conda-packages
 sudo unzip ./linux-conda-release.zip -d ./conda-packages
 sudo chmod 777 ./conda-packages/*
