@@ -12,10 +12,10 @@ echo %package%
 
 call mamba create ^
  -p %conda_env% ^
- occt vtk xerces-c libspnav pivy ros-humble-libyaml-vendor pyside2 r-libcoin python=3.11 blas=*=openblas numpy ^
+ occt vtk xerces-c pivy pyside2 r-libcoin python=3.11 numpy ^
  matplotlib-base scipy sympy pandas six pyyaml pycollada lxml ^
  xlutils olefile requests blinker opencv nine docutils ^
- opencamlib calculix ifcopenshell lark appimage-updater-bridge ^
+ opencamlib calculix ifcopenshell lark blas=*=openblas ^
  --copy ^
  -c freecad/label/dev ^
  -c conda-forge ^
