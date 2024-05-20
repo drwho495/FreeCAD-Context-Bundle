@@ -19,7 +19,7 @@ call mamba create ^
  -c conda-forge ^
  -y
 
-mamba install -y .\packages\*
+call mamba install -p %conda_env% .\packages\* --copy -c freecad/label/dev -y
  
 %conda_env%\python ..\scripts\get_freecad_version.py
 set /p freecad_version_name= <bundle_name.txt
