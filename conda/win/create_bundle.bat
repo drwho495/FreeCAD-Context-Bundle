@@ -14,7 +14,7 @@ call mamba create ^
  -p %conda_env% ^
  occt vtk xerces-c pivy pyside2 r-libcoin python=3.11 numpy ^
  matplotlib-base scipy sympy pandas six pyyaml pycollada lxml ^
- xlutils olefile requests blinker opencv nine docutils ^
+ xlutils olefile requests blinker opencv nine yaml-cpp docutils ^
  opencamlib calculix ifcopenshell lark blas=*=openblas ^
  --copy ^
  -c freecad/label/dev ^
