@@ -12,14 +12,14 @@ echo %package%
 
 call mamba create ^
  -p %conda_env% ^
- python=3.11 occt vtk calculix pyside2 gmsh ^
- numpy matplotlib-base scipy sympy pandas six ^
- pyyaml opencamlib xerces-c ifcopenshell lark coin3d ^
- pycollada lxml xlutils olefile conda-forge::libboost-devel=1.82 r-libcoin requests ^
- blinker opencv nine docutils ^
+ occt vtk xerces-c libspnav pivy ros-humble-libyaml-vendor pyside2 r-libcoin python=3.11 blas=*=openblas numpy ^
+ matplotlib-base scipy sympy pandas six pyyaml pycollada lxml ^
+ xlutils olefile requests blinker opencv nine docutils ^
+ opencamlib calculix ifcopenshell lark appimage-updater-bridge ^
  --copy ^
  -c freecad/label/dev ^
  -c conda-forge ^
+ -c r ^
  -y
 
 echo "Installing FreeCAD"
