@@ -14,7 +14,7 @@ call mamba create ^
  -p %conda_env% ^
  python=3.11 occt vtk calculix pyside2 gmsh ^
  numpy matplotlib-base scipy sympy pandas six ^
- pyyaml opencamlib xerces-c ifcopenshell lark ^
+ pyyaml opencamlib xerces-c ifcopenshell lark coin3d ^
  pycollada lxml xlutils olefile conda-forge::libboost-devel=1.82 r-libcoin requests ^
  blinker opencv nine docutils ^
  --copy ^
