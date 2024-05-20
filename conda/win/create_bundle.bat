@@ -5,7 +5,10 @@ mkdir %copy_dir%
 
 call certutil.exe -urlcache -split -f "https://github.com/drwho495/freecad-context-feedstock/releases/download/conda-release/windows-conda-package.zip" packages.zip
 mkdir packages
-tar -xf packages.zip -C packages
+tar -xf packages.zip -C .\packages
+dir .\packages
+for /f "delims=" %%a in ('dir /b/s freecad*.conda') do @set package=%%a 
+echo %package%
 
 call mamba create ^
  -p %conda_env% ^
@@ -19,7 +22,7 @@ call mamba create ^
  -c conda-forge ^
  -y
 
-call mamba install -p %conda_env% .\packages\* --copy -c freecad/label/dev -y
+call mamba install -p %conda_env% %package% --copy -c freecad/label/dev -y
  
 %conda_env%\python ..\scripts\get_freecad_version.py
 set /p freecad_version_name= <bundle_name.txt
